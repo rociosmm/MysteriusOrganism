@@ -81,7 +81,18 @@ const pAequorFactory = (idNum, arrDNABases) => {
   }
 }
 
+  // 30 instances
+  let sample = [];
+  let i = 0;
+  while (sample.length < 30) {
+    let temp = pAequorFactory(i, mockUpStrand());
+    if (temp.willLikelySurvive() == true) {
+      sample.push(temp);
+      i += 1
+    } 
+  }
 
+  console.log(sample);
 
 
 
